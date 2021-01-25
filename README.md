@@ -1,2 +1,1 @@
-# Graph
- Graph Algorithms
+Data Structure and Algorithms
