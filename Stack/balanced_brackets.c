@@ -23,17 +23,22 @@ int same(char a,char b)
 
 char* isBalanced(char* a) {
 
-    char stack[1001],top=-1;
-    for(int j=0;j<strlen(a);j++){
-        if(a[j]=='['||a[j]=='{'||a[j]=='(')
+    char stack[1001],top=-1; // -1 because the stack start empty
+    
+    for(int j=0;j<strlen(a);j++){ //runs through the stack
+        
+        if(a[j]=='['||a[j]=='{'||a[j]=='(')  // every time it finds an opening character -> push
             stack[++top]=a[j]; 
-        if(a[j]==']'||a[j]=='}'||a[j]==')'){
-            if(top==-1){
+        
+        if(a[j]==']'||a[j]=='}'||a[j]==')'){ // every time it finds an closing character -> pop
+            
+            if(top==-1){ // checks if for example it started with a closing character, then the stack was empty, so it's not balanced
                 return "NO";
             }
+            
             else{
-                if(!same(stack[top--],a[j])){
-                    return "NO";
+                if(!same(stack[top--],a[j])){ //if there is something in the stack, check if the last character in the stack is equivalent
+                    return "NO"; //if they're not equivalent
                 }
             }
         } 
@@ -41,7 +46,7 @@ char* isBalanced(char* a) {
     if(top!=-1){
         return "NO";
     }
-    return "YES";
+    return "YES"; //if it went through all the conditions, then it’s balanced
 }
 
 int main()
