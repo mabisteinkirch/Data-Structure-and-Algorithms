@@ -102,6 +102,7 @@ PONT removeNo{
 
 int main() {
   
+    PONT p = removeNo(r);
     
     return 0;
 }
