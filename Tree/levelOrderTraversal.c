@@ -16,6 +16,8 @@ struct node {
 };
 
 struct node* insert( struct node* root, int data ) {
+
+    //if empty
 		
 	if(root == NULL) {
 	
@@ -43,6 +45,8 @@ struct node* insert( struct node* root, int data ) {
 	}
 }
 
+//The height of a tree, or depth of a tree, is the maximum level of your children
+
 int getHeight(struct node* root) {
     
     int hl, hr;
@@ -62,18 +66,29 @@ int getHeight(struct node* root) {
 }
 
 void level(struct node *root,int h){
-      if(!root)
-          return ;
-      if(h==1)
-          printf("%d ", root->data);
-      level(root->left,h-1);
-      level(root->right,h-1);
+    if(!root)
+        return ;
+    if(h==1)
+        //then print the elements
+        printf("%d ", root->data);
+
+    //visits the children of the left with height less than h
+    level(root->left,h-1);
+    //then visits the children of the right with height less than h
+    level(root->right,h-1);
+
+    //returns to main function 
     
-  }
+}
 
 void levelOrder( struct node *root) {
-int n=getHeight(root);
+
+    //First step: calculates the height of the tree
+    int n=getHeight(root);
+
+    // travels nodes from height = 1 (i=1)
     for(int i=1;i<=n;i++){
+        
         level(root,i);
         
     }
