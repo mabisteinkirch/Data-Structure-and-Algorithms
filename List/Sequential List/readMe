@@ -1,0 +1,2 @@
+In data structures, a data structure is said to have sequential access if one can only visit the values it contains in one particular order. 
+Indexing into a list that has sequential access requires O(n) time, where n is the index.
