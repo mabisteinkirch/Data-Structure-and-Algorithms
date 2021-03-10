@@ -1,3 +1,8 @@
+LINEAR LIST
+
+Data structure in which each element is preceded by one element and followed by another - except the first that has no predecessor and the last that has no successor.
+The elements are in a given order (for example, the order of inclusion or ordered by a key).
+
 A linked list is a sequence of data structures, which are connected together via links.
 
 Types of Linked List:
