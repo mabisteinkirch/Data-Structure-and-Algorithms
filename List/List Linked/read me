@@ -1,0 +1,17 @@
+LINKED LIST
+
+It is a linear list in which there is a logical order of the elements, that is, the order viewed by the user has the same physical order (in main memory).
+
+1) Modeling
+Modeling is done using an array of records.
+These records contain information of interest to the user.
+The arrangement will have a fixed size and the number of elements is controlled with an additional variable.
+
+2) Management functions
+initialize the structure
+return the number of valid elements
+display the elements of the structure
+search for an element in the structure
+insert elements into the structure
+delete elements in the structure
+reinitialize the structure
